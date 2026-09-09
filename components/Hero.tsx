@@ -33,7 +33,7 @@ export function Hero() {
               className="gradient-border relative h-14 w-14 shrink-0 overflow-hidden rounded-full md:hidden"
             >
               <Image
-                src={profile.photoUrl}
+                src={withBasePath(profile.photoUrl)}
                 alt={profile.name}
                 fill
                 priority

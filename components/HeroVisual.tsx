@@ -5,6 +5,7 @@ import type { MouseEvent } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { profile } from "@/lib/data";
+import { withBasePath } from "@/lib/basePath";
 import { CodeBlock } from "./CodeBlock";
 import { FloatingBadge } from "./FloatingBadge";
 
@@ -47,7 +48,7 @@ export function HeroVisual() {
           className="gradient-border absolute inset-0 overflow-hidden rounded-[2rem] bg-surface shadow-2xl"
         >
           <Image
-            src={profile.photoUrl}
+            src={withBasePath(profile.photoUrl)}
             alt={profile.name}
             fill
             priority
