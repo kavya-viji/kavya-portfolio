@@ -306,7 +306,7 @@ export const projects: Project[] = [
       "Designed a clean, responsive interface so gym operations can be managed from any device.",
     ],
     tech: ["Next.js", "Prisma", "Supabase", "PostgreSQL", "TypeScript"],
-    link: "https://gym-management-roan-seven.vercel.app/login",
+    link: "https://gym-management-roan-seven.vercel.app",
     featured: true,
   },
 ];
