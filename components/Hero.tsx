@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { profile } from "@/lib/data";
-import { withBasePath } from "@/lib/basePath";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { HeroVisual } from "./HeroVisual";
 
@@ -33,7 +32,7 @@ export function Hero() {
               className="gradient-border relative h-14 w-14 shrink-0 overflow-hidden rounded-full md:hidden"
             >
               <Image
-                src={withBasePath(profile.photoUrl)}
+                src={profile.photoUrl}
                 alt={profile.name}
                 fill
                 priority
@@ -107,7 +106,7 @@ export function Hero() {
               View Projects
             </a>
             <a
-              href={withBasePath(profile.resumeUrl)}
+              href={profile.resumeUrl}
               download
               className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-via/60"
             >
