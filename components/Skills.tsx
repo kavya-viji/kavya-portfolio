@@ -56,7 +56,7 @@ export function Skills() {
           <button
             type="button"
             onClick={() => setActive("All")}
-            className="group flex flex-col items-center gap-2"
+            className="group flex w-20 shrink-0 flex-col items-center gap-2"
           >
             <span
               className={`flex h-14 w-14 items-center justify-center rounded-2xl border transition-all ${
@@ -68,7 +68,7 @@ export function Skills() {
               <Sparkles size={20} />
             </span>
             <span
-              className={`text-xs font-semibold ${
+              className={`flex h-8 w-full items-start justify-center text-center text-xs font-semibold leading-tight ${
                 active === "All" ? "text-foreground" : "text-muted"
               }`}
             >
@@ -84,7 +84,7 @@ export function Skills() {
                 key={group.category}
                 type="button"
                 onClick={() => setActive(group.category)}
-                className="group flex flex-col items-center gap-2"
+                className="group flex w-20 shrink-0 flex-col items-center gap-2"
               >
                 <span
                   className="flex h-14 w-14 items-center justify-center rounded-2xl border transition-all"
@@ -110,7 +110,7 @@ export function Skills() {
                   </span>
                 </span>
                 <span
-                  className={`max-w-[5.5rem] text-center text-xs font-semibold leading-tight ${
+                  className={`flex h-8 w-full items-start justify-center text-center text-xs font-semibold leading-tight ${
                     isActive ? "text-foreground" : "text-muted"
                   }`}
                 >

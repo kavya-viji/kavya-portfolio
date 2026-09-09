@@ -287,6 +287,8 @@ export const experience: ExperienceEntry[] = [
 
 export type Project = {
   name: string;
+  category: "professional" | "personal";
+  company?: string;
   description: string;
   highlights: string[];
   tech: string[];
@@ -296,7 +298,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "ArcherReview",
+    category: "professional",
+    company: "TartLabs",
+    description:
+      "A learning & assessment platform with role-based experiences — course catalogues, assessments, and a full purchase flow, built on a reusable component library.",
+    highlights: [
+      "Built role-based user experiences with robust Redux state management.",
+      "Delivered the assessment system end to end, from test creation to results.",
+      "Integrated Google APIs for address search and a full cart-to-payment purchase flow.",
+      "Full WCAG-compliant accessibility across the product.",
+    ],
+    tech: ["React.js", "Next.js", "TypeScript", "Redux", "REST APIs", "Google APIs", "Tailwind CSS"],
+  },
+  {
+    name: "PulsedIn",
+    category: "professional",
+    company: "TartLabs",
+    description:
+      "A community & learning platform for content and engagement — profiles, social feeds, and real-time chat, with a revamped, validation-driven auth flow.",
+    highlights: [
+      "Implemented real-time chat and messaging over WebSockets, replacing HTTP polling.",
+      "Built social features: post creation, likes, sharing, and interactive feeds.",
+      "Revamped login/signup with multi-step state validation for reliability.",
+      "Owned package and dependency upgrades across the application.",
+    ],
+    tech: ["React.js", "Next.js", "TypeScript", "Redux", "WebSockets", "REST APIs", "Tailwind CSS"],
+  },
+  {
     name: "Gym Management System",
+    category: "personal",
     description:
       "A full-stack gym management platform that lets gym owners and staff run day-to-day operations — members, schedules, and billing — from one dashboard, solving the spreadsheet-and-paperwork chaos most small gyms rely on.",
     highlights: [
