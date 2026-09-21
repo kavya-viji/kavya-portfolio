@@ -21,8 +21,13 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
             <Briefcase size={11} /> Built at {project.company}
           </span>
         )}
-        <h4 className="mb-2 text-lg font-bold text-foreground">{project.name}</h4>
-        <p className="mb-4 text-sm leading-relaxed text-muted">{project.description}</p>
+        <h4 className="text-lg font-bold text-foreground">{project.name}</h4>
+        {project.subtitle && (
+          <p className="mb-2 text-xs font-medium text-accent-via">{project.subtitle}</p>
+        )}
+        <p className={`mb-4 text-sm leading-relaxed text-muted ${project.subtitle ? "" : "mt-2"}`}>
+          {project.description}
+        </p>
 
         <ul className="mb-5 space-y-2">
           {project.highlights.map((point) => (

@@ -8,15 +8,15 @@ export const profile = {
   linkedin: "https://linkedin.com/in/kavya-k-1b623918b",
   github: "https://github.com/kavya-viji",
   summary:
-    "Results-driven Full Stack Developer with 4 years of experience building web applications using React.js, Next.js, Node.js, TypeScript, and JavaScript. Skilled in developing reusable UI components, integrating REST APIs, and managing application state with Redux. Proficient in accessibility (WCAG), performance optimisation via SSR/SSG, and cross-browser responsive development.",
+    "Results-driven Full Stack Developer with 4+ years of experience building web applications using React.js, Next.js, Node.js, TypeScript, and JavaScript. Skilled in developing reusable UI components, integrating REST APIs, and managing application state with Redux. Proficient in accessibility (WCAG), performance optimisation via SSR/SSG, and cross-browser responsive development.",
   aiNote:
     "Actively integrates AI tools (Claude AI, Cursor) into daily engineering workflows to accelerate delivery, improve code quality, and support technical research — aligned with an AI-native engineering culture.",
-  resumeUrl: "/resume/Kavya_K_Fullstack_Developer_Resume.pdf",
+  resumeUrl: "/resume/Kavya_K_Software_Engineer_Resume.pdf",
   photoUrl: "/photo/kavya.jpg",
 };
 
 export const stats = [
-  { label: "Years of Experience", value: "4" },
+  { label: "Years of Experience", value: "4+" },
   { label: "Companies", value: "3" },
   { label: "Modules Shipped", value: "10+" },
   { label: "WCAG-Compliant Delivery", value: "A11y" },
@@ -32,7 +32,7 @@ export const heroCode = {
       value: ["React", "Next.js", "Node.js", "TypeScript", "Redux"],
       type: "array" as const,
     },
-    { key: "experience", value: "4 years", type: "string" as const },
+    { key: "experience", value: "4+ years", type: "string" as const },
     {
       key: "focus",
       value: ["accessibility", "performance"],
@@ -134,6 +134,9 @@ export const skillGroups: SkillGroup[] = [
       "Claude AI",
       "ChatGPT",
       "Gemini",
+      "AI Agents",
+      "RAG",
+      "LLM Integration",
       "Prompt Engineering",
       "Context Engineering",
       "Cursor",
@@ -287,6 +290,7 @@ export const experience: ExperienceEntry[] = [
 
 export type Project = {
   name: string;
+  subtitle?: string;
   category: "professional" | "personal";
   company?: string;
   description: string;
@@ -299,10 +303,11 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "ArcherReview",
+    subtitle: "Healthcare Education & Exam Preparation Platform",
     category: "professional",
     company: "TartLabs",
     description:
-      "A learning & assessment platform with role-based experiences — course catalogues, assessments, and a full purchase flow, built on a reusable component library.",
+      "An e-learning platform providing test preparation, Q-banks, assessments, and learning resources for nursing and medical professionals.",
     highlights: [
       "Built role-based user experiences with robust Redux state management.",
       "Delivered the assessment system end to end, from test creation to results.",
@@ -313,23 +318,24 @@ export const projects: Project[] = [
   },
   {
     name: "PulsedIn",
+    subtitle: "Healthcare Professional Networking & Learning Platform",
     category: "professional",
     company: "TartLabs",
     description:
-      "A community & learning platform for content and engagement — profiles, social feeds, and real-time chat, with a revamped, validation-driven auth flow.",
+      "A micro-learning and professional networking platform connecting nurses with education, community, and career opportunities.",
     highlights: [
       "Implemented real-time chat and messaging over WebSockets, replacing HTTP polling.",
       "Built social features: post creation, likes, sharing, and interactive feeds.",
       "Revamped login/signup with multi-step state validation for reliability.",
       "Owned package and dependency upgrades across the application.",
     ],
-    tech: ["React.js", "Next.js", "TypeScript", "Redux", "WebSockets", "REST APIs", "Tailwind CSS"],
+    tech: ["React.js", "Next.js", "Node.js", "TypeScript", "Redux", "WebSockets", "REST APIs", "Tailwind CSS"],
   },
   {
     name: "Gym Management System",
     category: "personal",
     description:
-      "A full-stack gym management platform that lets gym owners and staff run day-to-day operations — members, schedules, and billing — from one dashboard, solving the spreadsheet-and-paperwork chaos most small gyms rely on.",
+      "A full-stack gym management platform for efficiently managing members, schedules, billing, and daily operations through a centralized dashboard.",
     highlights: [
       "Built end-to-end with Next.js, covering both the UI and server-side logic in a single codebase.",
       "Modelled and queried relational data with Prisma ORM on top of a Supabase-hosted PostgreSQL database.",
@@ -337,7 +343,7 @@ export const projects: Project[] = [
       "Designed a clean, responsive interface so gym operations can be managed from any device.",
     ],
     tech: ["Next.js", "Prisma", "Supabase", "PostgreSQL", "TypeScript"],
-    link: "https://gym-management-roan-seven.vercel.app",
+    link: "https://gym-management-tracker.vercel.app/",
     featured: true,
   },
 ];
